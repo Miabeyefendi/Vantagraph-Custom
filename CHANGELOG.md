@@ -8,7 +8,7 @@ Every released version of Vantagraph Custom, newest first. The format follows
 
 ---
 
-## 1.0.0 - 2026-09-24
+## [1.0.0](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0) - 2026-09-24
 
 First release. Vantagraph Custom is a lite edition of
 [Vantagraph](https://github.com/Miabeyefendi/Vantagraph) 5.0.2: the preset
