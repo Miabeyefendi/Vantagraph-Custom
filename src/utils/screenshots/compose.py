@@ -94,16 +94,35 @@ def sliced_app(names, edges):
     return out
 
 
+TITLE = "Vantagraph"
+TAGLINE = "Make your own theme!"
+TAGLINE_COLOURS = ["#C79BFF", "#38D1C8", "#5EE39A", "#FF8A3D"]  # plum, ocean, forest, ember accents
+
+
+def gradient_text(canvas, xy, text, fnt, colours):
+    """Text filled left to right with a gradient through `colours`."""
+    mask = Image.new("L", canvas.size, 0)
+    ImageDraw.Draw(mask).text(xy, text, font=fnt, fill=255, anchor="mt")
+    x0, _, x1, _ = mask.getbbox()
+    stops = [tuple(int(c[i:i + 2], 16) for i in (1, 3, 5)) for c in colours]
+    grad = Image.new("RGB", canvas.size)
+    px = grad.load()
+    for x in range(canvas.width):
+        t = min(1, max(0, (x - x0) / max(1, x1 - x0))) * (len(stops) - 1)
+        i = min(int(t), len(stops) - 2)
+        f = t - i
+        col = tuple(round(stops[i][k] + (stops[i + 1][k] - stops[i][k]) * f) for k in range(3))
+        for y in range(canvas.height):
+            px[x, y] = col
+    canvas.paste(grad, (0, 0), mask)
+
+
 def header(canvas):
-    """Logo, name and one line of promise, sized to read on a 200px card."""
-    logo = Image.open(LOGO).convert("RGBA")
-    logo = logo.crop(logo.getchannel("A").getbbox())
-    lh = 92
-    logo = logo.resize((round(logo.width * lh / logo.height), lh), Image.LANCZOS)
-    canvas.paste(logo, ((SIZE - logo.width) // 2, 34), logo)
+    """Name and one line of promise, sized to read on a 200px card. No logo:
+    the Marketplace card already carries the name, the mark lives in the README."""
     d = ImageDraw.Draw(canvas)
-    d.text((SIZE / 2, 150), "Vantagraph Custom", font=font("segoeuib.ttf", 62), fill="#F4F4F8", anchor="mt")
-    d.text((SIZE / 2, 228), "Every colour is yours", font=font("segoeui.ttf", 32), fill="#A9A9BC", anchor="mt")
+    d.text((SIZE / 2, 58), TITLE, font=font("segoeuib.ttf", 100), fill="#F4F4F8", anchor="mt")
+    gradient_text(canvas, (SIZE / 2, 190), TAGLINE, font("seguisb.ttf", 46), TAGLINE_COLOURS)
 
 
 def dots(canvas, active=None):
@@ -155,10 +174,10 @@ def build_gif():
     sheet = Image.new("RGB", (SIZE * len(stills), SIZE))
     for i, s in enumerate(stills):
         sheet.paste(s, (SIZE * i, 0))
-    # the rainbow logo is small but needs the most colours: 64 of the table go
-    # to the logo area alone, the other 191 to everything else
+    # the gradient tagline is small but needs the most colours: 64 of the table
+    # go to the header band alone, the other 191 to everything else
     ui = sheet.quantize(colors=191, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-    mark = stills[0].crop((SIZE // 2 - 150, 20, SIZE // 2 + 150, 140))
+    mark = stills[0].crop((0, 40, SIZE, 260))
     mark = mark.quantize(colors=64, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
     table = ui.getpalette()[:191 * 3] + mark.getpalette()[:64 * 3]
     pal = Image.new("P", (1, 1))

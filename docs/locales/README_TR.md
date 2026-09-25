@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/Miabeyefendi/Vantagraph-Custom/main/assets/logo-dark.svg" width="110" alt="Vantagraph Custom">
+<img src="https://raw.githubusercontent.com/Miabeyefendi/Vantagraph-Custom/main/assets/vantagraph-logo.png" width="150" alt="Vantagraph Custom">
 
 # Vantagraph Custom
 
