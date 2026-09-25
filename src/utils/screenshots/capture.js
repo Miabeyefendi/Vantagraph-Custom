@@ -7,8 +7,9 @@
 // 4. Restart Spotify normally so the port closes.
 //
 // The script saves the user's vantagraph-custom:* settings first and puts
-// them back at the end. The library is switched to Artists and the profile
-// picture hidden, so no private playlist names or photos end up in a shot.
+// them back at the end. The library is switched to Artists, and the profile
+// picture and the name of the playlist playing (right panel header) are
+// hidden, so no private playlist names or photos end up in a shot.
 
 const fs = require("fs");
 const path = require("path");
@@ -94,11 +95,12 @@ const PALETTES = {
     }
     await c.send("Emulation.setDeviceMetricsOverride", { width: VIEW.width, height: VIEW.height, deviceScaleFactor: 1, mobile: false });
 
-    // privacy: no avatar, library shows artists instead of personal playlists
+    // privacy: no avatar, no name of the playing playlist, library shows
+    // artists instead of personal playlists
     await js(`(() => {
       let s = document.getElementById("vgc-shot-style");
       if (!s) { s = document.createElement("style"); s.id = "vgc-shot-style"; document.head.appendChild(s); }
-      s.textContent = '.main-userWidget-box, .vg-user-widget, [data-testid="user-widget-link"] { visibility: hidden !important; }';
+      s.textContent = '.main-userWidget-box, .vg-user-widget, [data-testid="user-widget-link"], .main-nowPlayingView-headerText { visibility: hidden !important; }';
       return true;
     })()`);
     libraryFilter = await activeFilter();
