@@ -8,9 +8,11 @@
 
 | | |
 |---|---|
-| [Spotify Desktop](https://www.spotify.com/download/) | tested on `1.2.86` and newer |
-| [Spicetify CLI](https://spicetify.app/docs/getting-started) | tested on `2.43` and newer |
+| [Spotify Desktop](https://www.spotify.com/download/) | tested on `1.3.3` and newer |
+| [Spicetify CLI](https://spicetify.app/docs/getting-started) | tested on `2.45.2` and newer |
 | Platform | Windows, macOS or Linux |
+
+**Spotify `1.3.1` or older:** this page describes the current version. For older Spotify install the [outdated build](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0) by hand; the steps are in `INSTALL-LEGACY.txt` inside the archive. The Marketplace serves the current version only.
 
 Vantagraph Custom and [Vantagraph](https://github.com/Miabeyefendi/Vantagraph) are separate themes with separate extension files and separate stored settings. Pick one. If both sets of extensions are enabled at the same time, you get two settings buttons and two volume wheels.
 

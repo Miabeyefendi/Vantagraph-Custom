@@ -50,7 +50,7 @@
 
 ## 📦 Установка
 
-Нужны [Spotify](https://www.spotify.com/download/) `1.2.86+` и [Spicetify](https://spicetify.app/docs/getting-started) `2.43+`.
+Нужны [Spotify](https://www.spotify.com/download/) `1.3.3+` и [Spicetify](https://spicetify.app/docs/getting-started) `2.45.2+`. Spotify 1.3.1 или старше? Используйте [устаревшую сборку](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0).
 
 Быстрее всего через Spicetify Marketplace: найдите **Vantagraph Custom** и нажмите Install. Чтобы установить вручную:
 

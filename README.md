@@ -9,7 +9,7 @@
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-A78BFA?style=for-the-badge&logo=gnu&logoColor=white)](https://github.com/Miabeyefendi/Vantagraph-Custom/blob/main/LICENSE)
 [![Version](https://img.shields.io/github/v/release/Miabeyefendi/Vantagraph-Custom?style=for-the-badge&color=F59E0B&label=version)](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/latest)
 [![Downloads](https://img.shields.io/github/downloads/Miabeyefendi/Vantagraph-Custom/total?style=for-the-badge&color=22C55E&label=downloads)](https://github.com/Miabeyefendi/Vantagraph-Custom/releases)
-[![Spicetify](https://img.shields.io/badge/Spicetify_2.43%2B-1E293B?style=for-the-badge&logo=spotify&logoColor=white)](https://spicetify.app/)
+[![Spicetify](https://img.shields.io/badge/Spicetify_2.45.2%2B-1E293B?style=for-the-badge&logo=spotify&logoColor=white)](https://spicetify.app/)
 
 [English](https://github.com/Miabeyefendi/Vantagraph-Custom#readme) · [Türkçe](https://github.com/Miabeyefendi/Vantagraph-Custom/blob/main/docs/locales/README_TR.md) · [Español](https://github.com/Miabeyefendi/Vantagraph-Custom/blob/main/docs/locales/README_ES.md) · [简体中文](https://github.com/Miabeyefendi/Vantagraph-Custom/blob/main/docs/locales/README_ZH.md) · [Русский](https://github.com/Miabeyefendi/Vantagraph-Custom/blob/main/docs/locales/README_RU.md)
 
@@ -50,7 +50,9 @@
 
 ## 📦 Install
 
-You need [Spotify](https://www.spotify.com/download/) `1.2.86+` and [Spicetify](https://spicetify.app/docs/getting-started) `2.43+`.
+You need [Spotify](https://www.spotify.com/download/) `1.3.3+` and [Spicetify](https://spicetify.app/docs/getting-started) `2.45.2+`.
+
+> **Spotify 1.3.1 or older?** Use the outdated build, [Vantagraph Custom 1.0.0 (Outdated)](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0). Download `Vantagraph-Custom-1.0.0-OUTDATED-for-Spotify-1.3.1-and-earlier.rar`, it holds the files laid out like the Spicetify folders plus an `INSTALL-LEGACY.txt`. It is a snapshot of `main` at commit `21b7900`, the last state before Spotify 1.3.3 support, taken with `git archive` and packed with WinRAR. SHA-256: `7531559b2b0472bfa98ec2dacfd651065d97bce76e96d0c27a942687faedc2f2`. The Marketplace always installs the current version.
 
 The quickest way is Spicetify Marketplace: search for **Vantagraph Custom** and press Install. To install by hand instead:
 

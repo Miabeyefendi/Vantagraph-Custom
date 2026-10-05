@@ -50,7 +50,7 @@
 
 ## 📦 Kurulum
 
-[Spotify](https://www.spotify.com/download/) `1.2.86+` ve [Spicetify](https://spicetify.app/docs/getting-started) `2.43+` gerekiyor.
+[Spotify](https://www.spotify.com/download/) `1.3.3+` ve [Spicetify](https://spicetify.app/docs/getting-started) `2.45.2+` gerekiyor. Spotify 1.3.1 veya daha eskiyse [eski sürümü](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0) kullanın.
 
 En kısa yol Spicetify Marketplace: **Vantagraph Custom** diye ara ve Install'a bas. Elle kurmak için:
 

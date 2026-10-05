@@ -8,6 +8,37 @@ Every released version of Vantagraph Custom, newest first. The format follows
 
 ---
 
+## [1.1.0](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.1.0) - 2026-10-05
+
+Spotify 1.3.3 support. Spotify re-hashed its class names and Spicetify's `css-map` does not know the new ones yet, so rules written
+against names such as `main-card-card` or `Root__main-view` stopped reaching any element. Needs Spotify `1.3.3+` and Spicetify
+`2.45.2+`. For Spotify 1.3.1 and older use the [outdated build](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0).
+
+### Added
+
+- A compatibility layer in `theme.js`. 62 legacy class names and the three panel areas are given to the markup Spotify ships now, found through `data-testid`,
+  roles, encore ids, structure and grid areas, so cards, shelves, track rows, the entity header, the player bar and the three panels are
+  styled again.
+- Volume+ settings open from a right-click on the `%` button and from the quick volume panel, because Spicetify menu items no longer show
+  up in Spotify 1.3.3.
+- The lyric miniplayer settings open in a Spotify modal, because Spotify 1.3.3 answers `window.open` with `null`.
+- A QA harness in `src/utils/qa/` that drives a real Spotify.
+
+### Changed
+
+- The wave bars animate in CSS on the compositor instead of being redrawn from JavaScript. The main thread while music plays went from
+  79-83% busy to 21-22%.
+- Home cards hide their play button with `visibility`, which keeps about 90 layers out of the compositor.
+- The density setting, with and without a background image, keeps the left panel, the main view and the right panel on the same top and
+  bottom edges.
+- The lyrics highlight follows the accent colour through Spotify's lyrics colour variables.
+
+### Fixed
+
+- A saved track did not use the heart colour. Spotify 1.3.3 labels its button "Add to playlist", which no rule matched.
+- The "Vantagraph Settings" link in the lyric miniplayer settings did nothing.
+- The 60px glow behind the header artwork, the "next track" card and the card hover behave as designed again.
+
 ## [1.0.0](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0) - 2026-09-24
 
 First release. Vantagraph Custom is a lite edition of

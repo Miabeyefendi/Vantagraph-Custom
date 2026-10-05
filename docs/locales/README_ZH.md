@@ -50,7 +50,7 @@
 
 ## 📦 安装
 
-需要 [Spotify](https://www.spotify.com/download/) `1.2.86+` 和 [Spicetify](https://spicetify.app/docs/getting-started) `2.43+`。
+需要 [Spotify](https://www.spotify.com/download/) `1.3.3+` 和 [Spicetify](https://spicetify.app/docs/getting-started) `2.45.2+`。 Spotify 1.3.1 或更早版本请使用[旧版本](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0)。
 
 最快的方式是 Spicetify Marketplace：搜索 **Vantagraph Custom** 并点击 Install。若要手动安装：
 

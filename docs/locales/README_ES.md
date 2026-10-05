@@ -50,7 +50,7 @@
 
 ## 📦 Instalación
 
-Necesitas [Spotify](https://www.spotify.com/download/) `1.2.86+` y [Spicetify](https://spicetify.app/docs/getting-started) `2.43+`.
+Necesitas [Spotify](https://www.spotify.com/download/) `1.3.3+` y [Spicetify](https://spicetify.app/docs/getting-started) `2.45.2+`. ¿Spotify 1.3.1 o anterior? Usa la [versión desactualizada](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0).
 
 La vía más corta es Spicetify Marketplace: busca **Vantagraph Custom** y pulsa Install. Para instalarlo a mano:
 
