@@ -52,15 +52,15 @@
 
 You need [Spotify](https://www.spotify.com/download/) `1.3.3+` and [Spicetify](https://spicetify.app/docs/getting-started) `2.45.2+`.
 
-> **Spotify 1.3.1 or older?** Use the outdated build, [Vantagraph Custom 1.0.0 (Outdated)](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0). Download `Vantagraph-Custom-1.0.0-OUTDATED-for-Spotify-1.3.1-and-earlier.rar`, it holds the files laid out like the Spicetify folders plus an `INSTALL-LEGACY.txt`. It is a snapshot of `main` at commit `21b7900`, the last state before Spotify 1.3.3 support, taken with `git archive` and packed with WinRAR. SHA-256: `7531559b2b0472bfa98ec2dacfd651065d97bce76e96d0c27a942687faedc2f2`. The Marketplace always installs the current version.
+> **Spotify 1.3.1 or older?** Use the outdated build, [Vantagraph Custom 1.0.0 (Outdated)](https://github.com/Miabeyefendi/Vantagraph-Custom/releases/tag/1.0.0). Download `Vantagraph-Custom-1.0.0-OUTDATED-for-Spotify-1.3.1-and-earlier.rar`, it holds the files laid out like the Spicetify folders plus an `INSTALL-LEGACY.txt`. It is a snapshot of `main` at commit `21b7900`, the last state before Spotify 1.3.3 support, taken with `git archive` and packed with WinRAR. SHA-256: `160ac3c4171a0781fcee60eaa7ee9a7936d8742d3865804eed1b609c31b81ad6`. The Marketplace always installs the current version.
 
 The quickest way is Spicetify Marketplace: search for **Vantagraph Custom** and press Install. To install by hand instead:
 
-Copy this repository into `…/spicetify/Themes/` as a folder named `vantagraph-custom`, and every `.js` from its `Extensions/` folder into `…/spicetify/Extensions/`. Then:
+Copy this repository into `…/spicetify/Themes/` as a folder named `Vantagraph-Custom`, and every `.js` from its `Extensions/` folder into `…/spicetify/Extensions/`. Then:
 
 ```bash
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
-spicetify config current_theme vantagraph-custom
+spicetify config current_theme Vantagraph-Custom
 spicetify config extensions vantagraph-custom-settings.js
 spicetify apply
 ```

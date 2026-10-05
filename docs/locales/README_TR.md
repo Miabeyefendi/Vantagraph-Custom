@@ -54,11 +54,11 @@
 
 En kısa yol Spicetify Marketplace: **Vantagraph Custom** diye ara ve Install'a bas. Elle kurmak için:
 
-Bu depoyu `…/spicetify/Themes/` içine `vantagraph-custom` adlı bir klasör olarak, `Extensions/` klasöründeki her `.js` dosyasını da `…/spicetify/Extensions/` içine kopyala. Sonra:
+Bu depoyu `…/spicetify/Themes/` içine `Vantagraph-Custom` adlı bir klasör olarak, `Extensions/` klasöründeki her `.js` dosyasını da `…/spicetify/Extensions/` içine kopyala. Sonra:
 
 ```bash
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
-spicetify config current_theme vantagraph-custom
+spicetify config current_theme Vantagraph-Custom
 spicetify config extensions vantagraph-custom-settings.js
 spicetify apply
 ```

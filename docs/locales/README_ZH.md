@@ -54,11 +54,11 @@
 
 最快的方式是 Spicetify Marketplace：搜索 **Vantagraph Custom** 并点击 Install。若要手动安装：
 
-把本仓库复制到 `…/spicetify/Themes/`，目录名必须是 `vantagraph-custom`；再把其中 `Extensions/` 目录里的每个 `.js` 复制到 `…/spicetify/Extensions/`。然后：
+把本仓库复制到 `…/spicetify/Themes/`，目录名必须是 `Vantagraph-Custom`；再把其中 `Extensions/` 目录里的每个 `.js` 复制到 `…/spicetify/Extensions/`。然后：
 
 ```bash
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
-spicetify config current_theme vantagraph-custom
+spicetify config current_theme Vantagraph-Custom
 spicetify config extensions vantagraph-custom-settings.js
 spicetify apply
 ```

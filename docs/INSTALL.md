@@ -34,17 +34,17 @@ Spicetify keeps themes and extensions in two **separate** folders. Run `spicetif
 
 | What | Where it goes |
 |---|---|
-| This repository, with `color.ini`, `user.css` and `theme.js` at its root | `…/spicetify/Themes/vantagraph-custom/` |
+| This repository, with `color.ini`, `user.css` and `theme.js` at its root | `…/spicetify/Themes/Vantagraph-Custom/` |
 | Every `.js` file inside `Extensions/` | `…/spicetify/Extensions/` |
 
-Name the theme folder exactly `vantagraph-custom`. Spicetify finds a theme by its folder name, and on Linux the match is case-sensitive.
+Name the theme folder exactly `Vantagraph-Custom`. Spicetify finds a theme by its folder name, and on Linux the match is case-sensitive.
 
 The result should look like this:
 
 ```
 spicetify/
 ├─ Themes/
-│  └─ vantagraph-custom/
+│  └─ Vantagraph-Custom/
 │     ├─ color.ini
 │     ├─ user.css
 │     └─ theme.js
@@ -81,7 +81,7 @@ What each one actually does is in the [extensions guide](./EXTENSIONS.md).
 
 ```bash
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
-spicetify config current_theme vantagraph-custom
+spicetify config current_theme Vantagraph-Custom
 spicetify config extensions vantagraph-custom-settings.js
 spicetify apply
 ```
@@ -90,7 +90,7 @@ spicetify apply
 
 ```bash
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1 inject_theme_js 1
-spicetify config current_theme vantagraph-custom
+spicetify config current_theme Vantagraph-Custom
 spicetify config extensions vantagraph-custom-settings.js
 spicetify config extensions vantagraph-custom-volume-plus.js
 spicetify config extensions vantagraph-custom-lyric-miniplayer.js
