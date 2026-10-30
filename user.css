@@ -69,8 +69,8 @@ body {
 /* topbar button sizing: Encore wraps each button to its SVG intrinsic width
    (20x32 native vs 32x32 VG). Force uniform 32x32 on all action buttons (excl. profile). */
 
-/* top-right icons: 19px inside the 32px buttons (Spotify draws 16px), the theme's
-   buttons and Spotify's What's New / Friend Activity alike */
+/* top-right icons: 16px inside the 32px buttons, the size Spotify draws, for the
+   theme's buttons and Spotify's What's New / Friend Activity alike */
 button[aria-label="Vantagraph Custom"] svg,
 button[aria-label="Lyric Miniplayer"] svg,
 button[title="Vantagraph Custom"] svg,
@@ -78,14 +78,55 @@ button[title="Lyric Miniplayer"] svg,
 .vg-topbar-btn svg,
 #global-nav-bar .spicetify-topbar-button button svg,
 #global-nav-bar div:has(> button[data-restore-focus-key="buddy_feed"]) > button svg {
-  width: 19px !important;
-  height: 19px !important;
+  width: 16px !important;
+  height: 16px !important;
 }
 
 /* Spotify pads the What's New / Friend Activity pair 8px on the left, which put 16px
    before the bell and 8px everywhere else: one 8px gap between all four buttons */
 #global-nav-bar div:has(> button[data-restore-focus-key="buddy_feed"]) {
   padding-left: 0 !important;
+}
+
+/* Spicetify adds the theme's buttons in whatever order the extensions finish loading,
+   so they swapped places between launches: Lyric Miniplayer first, then Vantagraph Custom */
+#global-nav-bar .spicetify-topbar-button:has(> button[aria-label="Lyric Miniplayer"]) {
+  order: -2 !important;
+}
+
+#global-nav-bar .spicetify-topbar-button:has(> button[aria-label="Vantagraph Custom"]) {
+  order: -1 !important;
+}
+
+/* left group (back, forward, Marketplace and other Spicetify nav links) follows the
+   right one: 32px buttons, one 8px gap, no tile behind the icon */
+#global-nav-bar > div:first-of-type > div {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+#global-nav-bar > div:first-of-type div:has(> button[data-encore-id="buttonTertiary"]:first-child + button[data-encore-id="buttonTertiary"]:last-child) {
+  gap: 8px !important;
+  padding-inline: 0 !important;
+}
+
+#global-nav-bar > div:first-of-type div:has(> button[data-encore-id="buttonTertiary"]:first-child + button[data-encore-id="buttonTertiary"]:last-child) > button,
+#global-nav-bar .custom-navlinks-scrollable_container button {
+  width: 32px !important;
+  min-width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+}
+
+#global-nav-bar > div:first-of-type div:has(> button[data-encore-id="buttonTertiary"]:first-child + button[data-encore-id="buttonTertiary"]:last-child) > button svg,
+#global-nav-bar .custom-navlinks-scrollable_container button svg {
+  width: 16px !important;
+  height: 16px !important;
 }
 
 /* container gap */
