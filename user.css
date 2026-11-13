@@ -842,7 +842,7 @@ button[aria-checked="true"][data-testid="add-button"] path {
    so the label rules above and applyHeartColor() never see it. Any checked toggle button
    (repeat is a checkbox and keeps its own colour) gets the heart colour where tracks are saved. */
 [role="row"] button[aria-checked="true"]:not([role]) svg,
-[data-testid="now-playing-widget"] button[aria-checked="true"]:not([role]) svg,
+:is([data-testid="now-playing-widget"], [data-testid="now-playing-widget-v2"]) button[aria-checked="true"]:not([role]) svg,
 [data-testid="action-bar-row"] button[aria-checked="true"]:not([role]) svg {
   color: var(--spice-heart, var(--spice-accent)) !important;
 }
